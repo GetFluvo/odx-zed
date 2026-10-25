@@ -63,7 +63,9 @@ fn download() -> Result<String> {
             }
         }
     }
-    Ok(binary)
+    // Zed starts the process from its own directory, not the extension's.
+    let cwd = std::env::current_dir().map_err(|e| format!("the extension's directory: {e}"))?;
+    Ok(cwd.join(binary).to_string_lossy().into_owned())
 }
 
 impl zed::Extension for Odx {
