@@ -1,0 +1,27 @@
+id = "odx"
+name = "odx"
+description = "Odoo workspaces with odx: the dashboard, pull request status, changelog and glue addons of a project in the assistant"
+version = "0.1.0"
+schema_version = 1
+authors = ["Strategic Efficiency B.V."]
+repository = "https://github.com/getfluvo/odx-zed"
+
+[slash_commands.odx-dashboard]
+description = "the odx dashboard: pinned pull requests, upstream changes, ports, glue addons, drift"
+requires_argument = false
+
+[slash_commands.odx-status]
+description = "the aggregated and pinned pull requests and their state upstream"
+requires_argument = false
+
+[slash_commands.odx-changelog]
+description = "release notes of odx.lock since a revision (default HEAD)"
+requires_argument = false
+
+[slash_commands.odx-glue]
+description = "glue addons Odoo would install with what the project has"
+requires_argument = false
+
+[slash_commands.odx-sniff]
+description = "database migration scripts merges bring in since a revision (default HEAD)"
+requires_argument = false
