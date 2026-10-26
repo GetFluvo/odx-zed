@@ -31,9 +31,13 @@ project's `.zed/tasks.json`:
   { "label": "odx lock", "command": "odx", "args": ["lock"] },
   { "label": "odx vendor", "command": "odx", "args": ["vendor"] },
   { "label": "odx verify", "command": "odx", "args": ["verify"] },
-  { "label": "odx dashboard", "command": "odx", "args": ["dashboard", "--format", "tui"] }
+  { "label": "odx dashboard", "command": "odx", "args": ["dashboard"] }
 ]
 ```
+
+`odx dashboard --format tui` opens the interactive view in an odx built with
+the `tui` feature (`cargo install odx-cli --features tui`); the PyPI wheel
+leaves it out.
 
 ## Development
 
